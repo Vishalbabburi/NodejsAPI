@@ -1,0 +1,7 @@
+* Request first comes to app.js (it imports all the different route files)
+* Based on the "url pattern" app.js decides which router/routeFile should handle that request and delegates the request
+* The concerned route file (which has all the endpoints) gets the request and delegates it to the method present in controller file
+* As our controller imported a ModelDAO class, the concerned method in controller file calls a 
+ specific method of ModelDao to perform the business logic(db communication) and sends the response back.
+
+ flow: server app.js--> routes--> controller-->ModelDao-->db querying
